@@ -1,0 +1,2 @@
+Aqui vai depois ser compilado todo o nosso código
+Para não ficar meio cagado criem branches para além desta master
