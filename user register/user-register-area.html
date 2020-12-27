@@ -1,17 +1,78 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Bem-Vindo!</title>
     <link rel="stylesheet" href="register.css">
-    <script src="user-register.js"> </script>
+    <script src="https://kit.fontawesome.com/8b81305791.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
 
+<main>
+  <figure>
+    <picture>
+      <source  media="(min-width: 768px)"
+              srcset="//my-assets.netlify.com/codepen/dailyui-001/img.png     340w,
+                      //my-assets.netlify.com/codepen/dailyui-001/img@2x.png  680w,
+                      //my-assets.netlify.com/codepen/dailyui-001/img@3x.png 1020w"
+               sizes="360px" />
+      <source srcset="//my-assets.netlify.com/codepen/dailyui-001/img-small.png     340w,
+                      //my-assets.netlify.com/codepen/dailyui-001/img-small@2x.png  680w,
+                      //my-assets.netlify.com/codepen/dailyui-001/img-small@3x.png 1020w"
+               sizes="(min-width: 320px) 290px,
+                      (min-width: 480px) 435px
+                      (min-width: 640px) 580px" />
+      <img       src="//my-assets.netlify.com/codepen/dailyui-001/img.png"
+                 alt="Citymap illustration" />
+    </picture>
+  </figure>
+    <form action="action_page.php">
+        <div class="container">
+            <h1 class="headline">Criar Conta</h1>
+
+            <div class="form-control">
+                <input type="text" placeholder="ex: inesofia@esmad.ipp.pt" name="email" id="email" required/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Erro</small>
+            </div>
+
+            <div class="form-control">
+                <input type="text" placeholder="ex: inesofia" name="user" id="user" required/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Erro</small>
+            </div>
+            <div class="form-control">
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Insira uma password" name="psw" id="psw" required/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Erro</small>
+            </div>
+            <div class="form-control">
+
+                <label for="psw-repeat"><b>Repetir Password</b></label>
+                <input type="password" placeholder="Repetir Password" name="psw-repeat" id="psw-repeat" required>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Erro</small>
+            </div>
+            <div class="form-control">
+                <input type="checkbox" id="terms" name="terms" value="agree" required/>
+                <label for="terms"> Ao criar uma nova conta, concorda com os nossos <a href="#">Termos e Condições</a></label><br>
+                <button type="submit" class="registerbtn">Registar</button>
+            </div>
+
+            <div class="container signin">
+                <p> Já tem uma conta? <a href="#">Entrar</a>.</p>
+            </div>
+    </form>
+</main>
 </body>
 
 </html>
