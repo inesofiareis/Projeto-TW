@@ -11,3 +11,64 @@
     height: 192px;
     width: 364px;
 }
+
+.who{
+    margin: 75px 0;
+}
+
+.container h1{
+    text-align:center;
+    font-weight: 80;
+    letter-spacing: 1.2px;
+    padding: 0 0 10px 0;
+
+
+}
+
+h1::after{
+    content: " ";
+    background: #333;
+    display: block;
+    height: 3px;
+    width: 150px;
+    margin: 10px auto;
+}
+
+.columns{
+    margin: 25px 0 0 0;
+}
+
+.columns .image-box{
+    opacity:1;
+    display:block;
+    position: relative;
+
+}
+
+.image-box::after{
+    content: "";
+    opacity: 0;
+    background-color: rgb(0, 0,0, 0.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.image-box:hover:after{
+opacity:1;
+}
+
+.columns h2{
+    font-size: 25px;
+    margin: 15px 0 0 0 ;
+}
+
+
+.columns h3{
+    font-size: 18px;
+    margin: 15px 0 0 0 ;
+    font-weight: 80;
+}
