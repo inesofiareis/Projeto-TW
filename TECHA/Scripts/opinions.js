@@ -17,4 +17,21 @@ function fecharPopup() {
   popup.style.display = 'none';
 }
 
+const buttonSubmit = document.querySelector("#submit_opinion")
+const personName = document.querySelector("#name")
+const opinion = document.querySelector("#message")
+const avaliacao = document.querySelector("#avaliacao")
 
+
+function submetido() {
+
+  alert("Muito Obrigado! A sua opinião será postada em breve.")
+
+
+}
+
+function carregar(event) {
+  let imagem = document.getElementById('imagem_selecionada');
+  imagem.src = URL.createObjectURL(event.target.files[0]); 
+  //é assim que se vai buscar o ficheiro e torna o file na source da imagem
+}

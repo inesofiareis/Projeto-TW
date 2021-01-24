@@ -166,7 +166,7 @@ main {
 .parte_de_cima button {
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
     border: none;
-    width: 40%;
+    width: 80%;
     padding: 1rem;
     border-radius: 1rem;
     color: #264b77;
@@ -247,6 +247,7 @@ main {
   .button-ajuda:hover {
     background: rgba(0,0,0,0.17);
   }
+  
   
   .popup{
     display: none;

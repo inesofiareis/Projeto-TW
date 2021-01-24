@@ -15,89 +15,64 @@ function login() {
 }
 
 
-/* const form = document.querySelector("#register");
-const username = document.querySelector("#user");
-const email = document.querySelector("#email");
-const password = document.querySelector("#psw");
-const confirm = document.querySelector("#psw-repeat");
+let form = document.getElementById("register");
+let username = document.getElementById("user");
+let email = document.getElementById("email");
+let password = document.getElementById("psw");
+let confirm = document.getElementById("psw-repeat");
+
+let listNames = [];
+let listEmails = [];
 
 
-verify();
 
+form.onsubmit = function() {
 
+  let listNames = [];
+  let listEmails = [];
 
-
-function verify() {
-  const userValue = username.value.trim();
-  const emailValue = email.value.trim();
-  const passwordValue = password.value.trim();
-  const password2Value = confirm.value.trim();
-
-  let listNames = []
-  let listEmails = []
-
-
+  valido = true;
   for (let i = 0; i < listNames.length; i++) {
-      if (listNames.length === 0) {
-        aprovado(userValue, listNames);
-      } else if (userValue === listNames[i]) {
-        showError(userValue, "Este user já existe!");
+      if (listNames.length = 0) {
+        nextStep(username.value, listNames);
+      } else if (username.value === listNames[i]) {
+        showError("Este user já existe!");
       } else {
-        aprovado(userValue, listNames);
+        nextStep(username.value, listNames);
       }
   }
 
     for (let i = 0; i < listEmails.length; i++) {
-      if (emailValue === listEmails[i]) {
-        showError(email, "Este email já existe!")
-      } else if (listEmails.length === 0) {
-        aprovado(userValue, listNames);
+      if (email.value === listEmails[i]) {
+        showError("Este email já existe!")
+      } else if (listEmails.length = 0) {
+        nextStep(email.value, listEmails);
       } else {
-        aprovado(email, listEmails);
+        nextStep(email.value, listEmails);
       }
 
     }
-    if (passwordValue == "") {
-      showError(password, "Máximo de 20 caracteres")
-    } else {
-      serSucesso(password);
+
+    if (password.value.length > 20) {
+      showError("Máximo de 20 caracteres")
     }
 
-    if (passwordValue !== password2Value) {
-      showError(confirm, "As passes não correspondem")
-    } else {
-      serSucesso(confirm);
+    if (password.value !== confirm.value) {
+      showError("As passes não correspondem")
     }
 
 
-
-    function showError(input, whatShows) {
-      input.placeholder = whatShows;
+    function showError(message) {
+      alert(message);
+      valido = false;
+      return valido;
     }
 
-    function aprovado(input, list) {
-      input.push(list);
+    function nextStep(input, list) {
+      list.push(input);
     }
 
+    console.log(listEmails);
+    console.log(listNames);
 
-    function serSucesso(input) {
-      input;
-    }
-   } */
-
-function validateForm() {
-
-  const form = document.getElementbyId("register");
-  const username = document.getElementbyId("user");
-  const email = document.getElementbyId("email");
-  const password = document.getElementbyId("psw");
-  const confirm = document.getElementbyId("psw-repeat");
-
-  const userValue = username.value.trim();
-  const emailValue = email.value.trim();
-  const passwordValue = password.value.trim();
-  const password2Value = confirm.value.trim();
-    
-
-  alert(userValue);
-  }
+   } 
