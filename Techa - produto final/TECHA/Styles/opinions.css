@@ -1,0 +1,408 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  color: #001045;
+  font-weight: 600;
+  font-size: 2.5rem;
+  opacity: 0.8;
+}
+
+h2 {
+  color: #164ca8;
+  font-weight: 500;
+  opacity: 0.8;
+  font-size: 1rem;
+}
+
+.dashboard h2 {
+  color: #164ca8;
+  font-weight: 500;
+  opacity: 0.8;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+p {
+  color: #3480c4;
+  font-weight: 500;
+  opacity: 0.8;
+  font-size: 0.7rem;
+}
+
+h3 {
+  color: #001045;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+a:visited,
+a:link {
+  text-decoration: none;
+  color: #001045;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #36adff;
+}
+
+.compras a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.compras a:link {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  font-family: 'Poppins', sans-serif;
+  min-height: 160vh;
+  width: 87rem;
+  background: linear-gradient(to right top, #244674, #001045);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vidro {
+  background: white;
+  height: 160vh;
+  width: 78%;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+  border-radius: 10px;
+  z-index: 2;
+  backdrop-filter: blur(5rem);
+  display: flex;
+}
+
+.flame1,
+.flame2 {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.5;
+  filter: brightness(110%)
+}
+
+.flame1 {
+  top: 1%;
+  left: 1%;
+  transform: rotate(-25deg);
+}
+
+.flame2 {
+  bottom: -35%;
+  right: 1%;
+  transform: rotate(25deg);
+}
+
+.dashboard {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+  border-radius: 0.8rem;
+}
+
+.techa_logo {
+  opacity: 0.8;
+  margin: 0rem 0rem 0rem 0.5rem;
+  filter: brightness(90%);
+}
+
+.fire {
+  position: absolute;
+  top: -10px;
+  left: 140px;
+}
+
+.user {
+  margin: -3rem 0rem 0rem 0rem;
+}
+
+.links {
+  margin: -2rem 0rem 0rem 0rem;
+}
+
+.link {
+  display: flex;
+  margin: 0.5rem 0rem;
+  padding: 0.5rem 5rem;
+  align-items: center;
+}
+
+.link h2 {
+  padding: 0rem 2rem;
+}
+
+.opinioes {
+  flex: 2;
+}
+
+
+.parte_de_cima {
+  display: flex;
+  margin: 5rem 7rem 0rem 7rem;
+  justify-content: space-between;
+}
+
+.parte_de_cima button {
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+  border: none;
+  width: 90%;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: #264b77;
+  font-weight: 500;
+  outline: none;
+}
+
+.opinioes {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem;
+  justify-content: space-evenly;
+}
+
+.opiniao {
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(to left top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.233));
+  border-radius: 1rem;
+  margin: 1.5rem 0rem 0rem 0rem;
+  padding: 1.5rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+  justify-content: space-between;
+  position: relative;
+}
+
+.opiniao img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.4);
+  margin: 1.5rem;
+}
+
+
+.opiniao_info {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem;
+  justify-content: space-around;
+}
+
+.rating {
+  font-weight: bold;
+  background: linear-gradient(to right top, #244674, #001045);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Botão e pop-up*/
+
+:root {
+  --modal-duration: 1s;
+  --modal-color: #428bca;
+}
+
+
+.button-ajuda {
+  padding: 2em 2em;
+  border: 0;
+  border-radius: 90%;
+  cursor: pointer;
+  z-index: 2;
+  bottom: 2.3rem;
+  right: 2.3rem;
+  outline: none;
+  background: transparent;
+  position: absolute;
+  position: fixed;
+}
+
+.button-image {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  position: fixed;
+}
+
+.button-ajuda:hover {
+  background: rgba(0, 0, 0, 0.17);
+}
+
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 6;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.conteudo_popup {
+  width: 30%;
+  border-radius: 0.8rem;
+  margin: 1.7rem 0rem 0rem 58rem;
+
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.cabecalho h2,
+.cabecalho h3 {
+  margin: 0;
+  color: #fff;
+  font-size: large;
+}
+
+.cabecalho {
+  background: var(--modal-color);
+  padding: 15px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to left top, rgba(57, 174, 255, 0.7), rgba(153, 255, 255, 0.37));
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+}
+
+
+
+.corpo {
+  height: 400px;
+  padding: 10px 20px;
+  background: #fff;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+  z-index: 2;
+  backdrop-filter: blur(5rem);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.corpo p {
+  font-size: 1rem;
+}
+
+.card {
+  background: linear-gradient(to left top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.233));
+  border-radius: 1rem;
+  margin: 1rem 0rem;
+  padding: 1.5rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+  font-family: 'Poppins', sans-serif;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid rgb(117, 116, 116);
+  outline: none;
+  background: transparent;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.sendbtn {
+  width: 85%;
+  padding: 10px 30px;
+  margin: 30px auto;
+  cursor: pointer;
+  display: block;
+  background: linear-gradient(to top right, rgb(4, 151, 255, 0.7), rgba(111, 255, 255, 0.336));
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+
+.footer {
+  background: var(--modal-color);
+  padding: 2px;
+  color: #fff;
+  background: linear-gradient(to right bottom, rgba(57, 174, 255, 0.7), rgba(59, 255, 255, 0.637));
+
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.footer img {
+  margin: 0px 0px 0px 40px;
+  width: 75px;
+}
+
+
+.fechar {
+  color: #ccc;
+  float: right;
+  font-size: 40px;
+  color: #fff;
+  margin: -20px -5px 0px 0px;
+}
+
+.fechar:hover,
+.fechar:focus {
+  color: rgb(0, 1, 88);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+@media (max-width: 678px) {
+  .review-one {
+    margin-top: 1.5rem;
+  }
+}
+
+.gestao_btn {
+  background: none;
+  color: rgb(31, 31, 31);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+.compras {
+  background: linear-gradient(to right top, #284f7a, #3aafff);
+  opacity: 0.7;
+  border-radius: 1.5rem;
+  color: white;
+  padding: 1rem 4rem;
+}
