@@ -1,0 +1,39 @@
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de conta</title>
+    <link rel="stylesheet" href="../Styles/gestão_conta.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="main_part">
+        <div class="box_of_all_things">
+            <div class='mudar_foto'>
+                <img src="../Images/icons8-usuário-de-gênero-neutro-100.png" class='img_conta' height=100px width=100px>
+                <input type='file' id='file'>
+                <label for='file' id='uplaodBtn'>Escolher uma foto</label>
+            </div>
+            <h1 class='gestao_h1'>Gestão de conta</h1>
+            <form class="form_part" id="gestao">
+                <input type="text" placeholder="Insira um novo user" name="n_user" id="n_user" class="input" required />
+                <input type="password" placeholder="Insira uma nova password" name="n_psw" id="n_psw" class="input"
+                    required />
+                <input type="password" placeholder="Confirme a nova password" name="c_n_psw" id="c_n_psw" class="input"
+                    required />
+                <button type="submit" class="alterarbtn">Alterar</button>
+                <button class="go_back" onclick="location.href='homepage.html';">Voltar</button></a>
+            </form>
+        </div>
+    </div>
+
+    <script src="../Scripts/script.js"></script>
+    <script src="../Scripts/gestao_conta.js"></script>
+    <script src="../Scripts/foto_username_psw.js"></script>
+</body>
+
+</html>
